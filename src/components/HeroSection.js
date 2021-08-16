@@ -26,9 +26,8 @@ const HeroStyles = styled.div`
     font-size: 20px;
     margin-left: 75px;
   }
-
   #cv_button {
-    background-color: red;
+    background-color: var(--gray-1);
     cursor: pointer;
     z-index: 100 !important;
     margin-top: 2rem;
@@ -37,7 +36,10 @@ const HeroStyles = styled.div`
     border: 2px solid var(--gray-1);
     border-radius: 8px;
     display: inline-block;
-    color: var(--dark-bg);
+    color: var(--gray-2);
+  }
+  .btn-link {
+    color: var(--gray-2);
   }
   @media only screen and (max-width: 768px) {
     font-size: 1.8rem;
@@ -73,7 +75,7 @@ const HeroStyles = styled.div`
   //Image Profile Pic//
   .hero__img {
     max-width: 800px;
-    width: 60%;
+    width: 95%;
     height: auto;
     margin: 0 auto;
     border: 3px solid var(--gray-1);
@@ -112,7 +114,7 @@ const HeroStyles = styled.div`
       }
     }
     .hero__img {
-      height: 300px;
+      height: 400px;
     }
     .hero__info {
       margin-top: 3rem;
@@ -170,10 +172,9 @@ export default function HeroSection() {
                 download
                 rel="noopener noreferrer"
                 btnText="Download CV"
-                btnLink="/projects"
               >
                 <a
-                  className="App-link"
+                  className="btn-link"
                   href={cv}
                   download
                   rel="noopener noreferrer"
